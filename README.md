@@ -2,17 +2,14 @@
 [![Javadocs](https://javadoc.io/badge/org.scalaj/scalaj-http_2.12.svg)](https://javadoc.io/doc/org.scalaj/scalaj-http_2.12)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fscalaj%2Fscalaj-http.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fscalaj%2Fscalaj-http?ref=badge_shield)
 
-# THIS LIBRARY IS DEPRECATED
+# THIS LIBRARY IS SECONDARY DRVELOPMENT FOR scalaj-http
 
-As of April 2022 there are many supported options for making HTTP calls in scala:
+I encountered the following issues while using the spark-spline plugin:
 
-- [sttp](https://github.com/softwaremill/sttp) or [http4s](https://github.com/http4s/http4s) might be good scala first options
-- The native [HttpClient](https://docs.oracle.com/en/java/javase/12/docs/api/java.net.http/java/net/http/HttpClient.html) library if you're using JDK 11+ and want minimal deps
+- The dependency for spark-spline is Scala 2.11 and Scala 2.12.
+- spark-spline does not support HTTPS requests through a proxy with request authentication.
 
-If you've inherited a codebase that's using this library, I would suggest just copying the source code
-(it's only four files, and no depedencies) and make whatever fixes/changes you want.
-
-Good luck!
+Based on the above issues, I wrapped the following methods to meet my needs
 
 # Simplified Http
 
